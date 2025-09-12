@@ -10,6 +10,7 @@ TagManager:
   - sidewall
   - topwall
   - bottomwall
+  - logic
   layers:
   - Default
   - TransparentFX
