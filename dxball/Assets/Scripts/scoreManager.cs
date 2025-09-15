@@ -7,6 +7,9 @@ public class scoreManager : MonoBehaviour
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI winText;
 
+    public GameObject ball;
+    public GameObject paddle;
+
     int score = 0;
 
     public void addScore(int input)
@@ -16,11 +19,13 @@ public class scoreManager : MonoBehaviour
         {
             score = score + input;
 
-            scoreText.text = score.ToString() + "Points";
+            scoreText.text = score.ToString() + " Points";
 
-            if (score == 1)
+            if (score == 12)
             { // for testing purpose
                 winText.text = "You Win!";
+                ball.SetActive(false);
+                paddle.SetActive(false);
 
             }
         }
@@ -29,6 +34,8 @@ public class scoreManager : MonoBehaviour
         {
 
             winText.text = "Game Over!";
+            ball.SetActive(false);
+            paddle.SetActive(false);
 
         }
     }
