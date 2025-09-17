@@ -584,7 +584,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 769ca9b97969cf848a83e2184e1ce380, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  displacement: 0.15
+  displacement: 0.12
 --- !u!50 &313166558
 Rigidbody2D:
   serializedVersion: 5
@@ -1064,7 +1064,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14bde6a57ce2d444e87e7bb02f360352, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  speed: 10
+  speed: 12
   direction: {x: 0, y: 0}
   brickCount: 0
   score: {fileID: 0}
