@@ -11,6 +11,7 @@ TagManager:
   - topwall
   - bottomwall
   - logic
+  - startbutton
   layers:
   - Default
   - TransparentFX

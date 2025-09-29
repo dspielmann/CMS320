@@ -22,7 +22,7 @@ public class scoreManager : MonoBehaviour
 
             scoreText.text = score.ToString() + " Points";
 
-            if (score == 12)
+            if (score == 13)
             { // for testing purpose
                 winText.text = "You Win!";
                 ball.SetActive(false);
