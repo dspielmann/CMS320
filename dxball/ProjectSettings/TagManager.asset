@@ -12,6 +12,8 @@ TagManager:
   - bottomwall
   - logic
   - startbutton
+  - stone
+  - music
   layers:
   - Default
   - TransparentFX
