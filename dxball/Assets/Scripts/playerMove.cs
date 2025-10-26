@@ -1,22 +1,26 @@
 using UnityEngine;
 public class move : MonoBehaviour
 {
-Rigidbody2D pad;
-Vector2 initial;
-public float displacement;
+    Rigidbody2D pad;
+
+    AudioManager audioManager;
+    Vector2 initial;
+    public float displacement;
     // Start is called once before the first execution of Update after
     public Animator animator;
 
 
     void Start()
-{
-pad = GetComponent<Rigidbody2D>();
-initial = pad.transform.localPosition;
-}
-// Update is called once per frame
-void Update()
+    {
+        pad = GetComponent<Rigidbody2D>();
+        initial = pad.transform.localPosition;
+        audioManager = GameObject.FindGameObjectWithTag("music").GetComponent<AudioManager>();
 
-{
+    }
+    // Update is called once per frame
+    void Update()
+
+    {
         if ((Input.GetKey(KeyCode.RightArrow)))
         {
             animator.SetBool("isRunning", true);
@@ -32,6 +36,16 @@ void Update()
         {
             animator.SetBool("isRunning", false);
         }
-pad.MovePosition(initial);
-}
+        pad.MovePosition(initial);
+    }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("brick"))
+        {
+            Debug.Log("Stumble Sound");
+            audioManager.PlaySXF(audioManager.stumbleSound);
+        }
+
+    }
 }
